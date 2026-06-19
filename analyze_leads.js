@@ -282,12 +282,12 @@ for (let i = 1; i < rows.length; i++) {
     }
   }
 
-  // Short, conversational, human-like outreach messages (Real estate web design pivot)
-  const ideasMsg = `Hi ${clinic_name} team, noticed you're doing property deals ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'} but couldn't find a website for your agency. I put together a quick, simple website mockup showing how you can showcase your listings and get buyers to WhatsApp you directly. Would it be alright if I sent the link over?`;
-  const auditMsg = `Hi ${clinic_name} team, I was looking at property consultants ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in your area'} on Google Maps and noticed your listing doesn't link to a website. You're probably losing a lot of leads to competitors who have active listing sites. I recorded a quick 90-second video showing a simple layout that could double your inquiries. Can I send it over?`;
-  const growthMsg = `Hi ${clinic_name} team, we build simple, high-converting property listing sites that help real estate agents ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in your area'} get 20+ direct buyer inquiries every month without paying listing portal fees. I have a short PDF showing the design we used for a nearby builder. Can I share it with you?`;
-  const friendlyMsg = `Hey, just following up on this. I know you guys must be busy closing property deals! Did you get a chance to read my message about the website concept? Let me know if you want to take a quick look.`;
-  const tipMsg = `Quick tip: you can add a WhatsApp booking link in your Google Maps contact section. Since you don't have a website yet, it's the fastest way to get buyers to message you directly. I have a 1-page guide on how to do this if you want it?`;
+  // Short, conversational, human-like outreach messages (Real estate web design pivot with free demo offer)
+  const ideasMsg = `Hi ${clinic_name} team, noticed you're doing property deals ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'} but couldn't find a website for your agency. I went ahead and made a free demo website concept showing how you can showcase your listings. Would it be alright if I sent the link over?`;
+  const auditMsg = `Hi ${clinic_name} team, I noticed your property listing on Google Maps doesn't link to a website. I actually built a free demo website showing a custom layout that could double your listing inquiries ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in your area'}. Can I send the link over to take a quick look?`;
+  const growthMsg = `Hi ${clinic_name} team, we build listing portals for real estate agents ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'}. I created a free demo website specifically modeled for your agency to show how you can get direct inquiries without portal fees. Would you like to see it?`;
+  const friendlyMsg = `Hey, just checking in. I know you guys are busy closing deals! Did you get a chance to see my message about the free demo website I set up for you? Let me know if you want to take a quick look.`;
+  const tipMsg = `Quick tip: linking a property catalog directly to your WhatsApp is the fastest way to get buyer inquiries. The free demo website I created for you has this fully set up already. Let me know if I should send the link over to show you.`;
 
   const defaultOutreachMessage = ideasMsg; // Default Pitch 1
 

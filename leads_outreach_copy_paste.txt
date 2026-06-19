@@ -7,13 +7,13 @@ Use this file to easily copy contacts and outreach messages without any markdown
 --------------------------------------------------------------------------------
 Lead #1: The Dental Care clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 334 9540490
-City: Islamabad
+Contact Details (Phone): +92 334 9540490
+WhatsApp Click-to-Chat Link: https://wa.me/923349540490?text=Hi%20The%20Dental%20Care%20clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi The Dental Care clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -21,8 +21,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #2: Perfect 32 Dental Clinic & Dentist Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 335 5528080
+Contact Details (Phone): +92 335 5528080
+WhatsApp Click-to-Chat Link: https://wa.me/923355528080?text=Hi%20Perfect%2032%20Dental%20Clinic%20%26%20Dentist%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -35,13 +35,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #3: Dental Parlor and Implant Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 332 8880891
-City: Islamabad
+Contact Details (Phone): +92 332 8880891
+WhatsApp Click-to-Chat Link: https://wa.me/923328880891?text=Hi%20Dental%20Parlor%20and%20Implant%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dental Parlor and Implant Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -49,8 +49,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #4: Capital Dental Clinic Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051-8151800
+Contact Details (Phone): 051-8151800
+WhatsApp Click-to-Chat Link: https://wa.me/0518151800?text=Hi%20Capital%20Dental%20Clinic%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -65,6 +65,9 @@ Lead #5: OraDent Dental Clinic Islamabad (I8)
 --------------------------------------------------------------------------------
 Contact Method: Instagram DM
 Contact Details: @oradent_clinic
+Instagram Profile Link: https://instagram.com/oradent_clinic
+Contact Details (Phone): +92 324 9134745
+WhatsApp Click-to-Chat Link: https://wa.me/923249134745?text=Hi%20OraDent%20Dental%20Clinic%20Islamabad%20(I8)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -79,11 +82,14 @@ Lead #6: Tooth Crew Clinic
 --------------------------------------------------------------------------------
 Contact Method: Instagram DM
 Contact Details: @toothcrewclinic
-City: Islamabad
+Instagram Profile Link: https://instagram.com/toothcrewclinic
+Contact Details (Phone): +92 333 4786007
+WhatsApp Click-to-Chat Link: https://wa.me/923334786007?text=Hi%20Tooth%20Crew%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Tooth Crew Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -91,8 +97,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #7: Islamabad Aesthetic and Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0334 0334786
+Contact Details (Phone): 0334 0334786
+WhatsApp Click-to-Chat Link: https://wa.me/03340334786?text=Hi%20Islamabad%20Aesthetic%20and%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -105,13 +111,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #8: Smile Dental Care Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051-2252963
-City: Islamabad
+Contact Details (Phone): 051-2252963
+WhatsApp Click-to-Chat Link: https://wa.me/0512252963?text=Hi%20Smile%20Dental%20Care%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Smile Dental Care Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -119,13 +125,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #9: Dr Moosa Zulfiqar (CDDC Dentistry)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 336 9399938
-City: Islamabad
+Contact Details (Phone): +92 336 9399938
+WhatsApp Click-to-Chat Link: https://wa.me/923369399938?text=Hi%20Dr%20Moosa%20Zulfiqar%20(CDDC%20Dentistry)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr Moosa Zulfiqar (CDDC Dentistry) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -133,8 +139,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #10: Alpha Dental Clinic Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 348 0966024
+Contact Details (Phone): +92 348 0966024
+WhatsApp Click-to-Chat Link: https://wa.me/923480966024?text=Hi%20Alpha%20Dental%20Clinic%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -149,11 +155,14 @@ Lead #11: Smile Avenue
 --------------------------------------------------------------------------------
 Contact Method: Instagram DM
 Contact Details: @smileavenue2.0
-City: Islamabad
+Instagram Profile Link: https://instagram.com/smileavenue2.0
+Contact Details (Phone): +92 339 5183329
+WhatsApp Click-to-Chat Link: https://wa.me/923395183329?text=Hi%20Smile%20Avenue%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Smile Avenue team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -161,13 +170,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #12: Painless Dental And Medical Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0313 5842968
-City: Islamabad
+Contact Details (Phone): 0313 5842968
+WhatsApp Click-to-Chat Link: https://wa.me/03135842968?text=Hi%20Painless%20Dental%20And%20Medical%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Painless Dental And Medical Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -177,6 +186,9 @@ Lead #13: OraDent Dental Clinic Islamabad (F8)
 --------------------------------------------------------------------------------
 Contact Method: Instagram DM
 Contact Details: @oradent_clinic
+Instagram Profile Link: https://instagram.com/oradent_clinic
+Contact Details (Phone): +92 306 5393039
+WhatsApp Click-to-Chat Link: https://wa.me/923065393039?text=Hi%20OraDent%20Dental%20Clinic%20Islamabad%20(F8)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -189,13 +201,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #14: Z Dental Studio
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0345 5336999
-City: Islamabad
+Contact Details (Phone): 0345 5336999
+WhatsApp Click-to-Chat Link: https://wa.me/03455336999?text=Hi%20Z%20Dental%20Studio%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Z Dental Studio team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -205,11 +217,14 @@ Lead #15: Smile Square Dental & Aesthetic Clinic
 --------------------------------------------------------------------------------
 Contact Method: Instagram DM
 Contact Details: @smilesquareIslamabad
-City: Islamabad
+Instagram Profile Link: https://instagram.com/smilesquareIslamabad
+Contact Details (Phone): 0343 5888911
+WhatsApp Click-to-Chat Link: https://wa.me/03435888911?text=Hi%20Smile%20Square%20Dental%20%26%20Aesthetic%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Smile Square Dental & Aesthetic Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -217,8 +232,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #16: Tooth And Teeth ISLAMABAD
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0345 5910360
+Contact Details (Phone): 0345 5910360
+WhatsApp Click-to-Chat Link: https://wa.me/03455910360?text=Hi%20Tooth%20And%20Teeth%20ISLAMABAD%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -231,8 +246,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #17: Islamabad Dental clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0333 8944866
+Contact Details (Phone): 0333 8944866
+WhatsApp Click-to-Chat Link: https://wa.me/03338944866?text=Hi%20Islamabad%20Dental%20clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -245,8 +260,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #18: Smile Line Dental Practice | Scaling and Polishing | Teeth Whitening | Dentist Near Me | Best in Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 335 6611550
+Contact Details (Phone): +92 335 6611550
+WhatsApp Click-to-Chat Link: https://wa.me/923356611550?text=Hi%20Smile%20Line%20Dental%20Practice%20%7C%20Scaling%20and%20Polishing%20%7C%20Teeth%20Whitening%20%7C%20Dentist%20Near%20Me%20%7C%20Best%20in%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -259,8 +274,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #19: Dr. Syed Ilyas Jan - Dental Surgeon
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5151556
+Contact Details (Phone): 0300-5151556
+WhatsApp Click-to-Chat Link: https://wa.me/03005151556?text=Hi%20Dr.%20Syed%20Ilyas%20Jan%20-%20Dental%20Surgeon%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -273,13 +288,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #20: Dr. Raheel Nabi
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0317 5691709
-City: Islamabad
+Contact Details (Phone): 0317 5691709
+WhatsApp Click-to-Chat Link: https://wa.me/03175691709?text=Hi%20Dr.%20Raheel%20Nabi%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Raheel Nabi team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -287,13 +302,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #21: Dr. Anum Fatima
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 042-34500888
-City: Islamabad
+Contact Details (Phone): 042-34500888
+WhatsApp Click-to-Chat Link: https://wa.me/04234500888?text=Hi%20Dr.%20Anum%20Fatima%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Anum Fatima team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -301,13 +316,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #22: Dr. Mamoon Pasha (dentist, uk specialist) (cosmetic dentist)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5123456
-City: Islamabad
+Contact Details (Phone): 0300-5123456
+WhatsApp Click-to-Chat Link: https://wa.me/03005123456?text=Hi%20Dr.%20Mamoon%20Pasha%20(dentist%2C%20uk%20specialist)%20(cosmetic%20dentist)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Mamoon Pasha (dentist, uk specialist) (cosmetic dentist) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -315,13 +330,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #23: NorthWestern Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0347 1953945
-City: Islamabad
+Contact Details (Phone): 0347 1953945
+WhatsApp Click-to-Chat Link: https://wa.me/03471953945?text=Hi%20NorthWestern%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi NorthWestern Dental Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -329,13 +344,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #24: Arwa Dental Surgery
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0326 8473783
-City: Islamabad
+Contact Details (Phone): 0326 8473783
+WhatsApp Click-to-Chat Link: https://wa.me/03268473783?text=Hi%20Arwa%20Dental%20Surgery%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Arwa Dental Surgery team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -343,8 +358,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #25: Smile and Skin Co. | Best Dental Clinic in G-8 Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0315 8441955
+Contact Details (Phone): 0315 8441955
+WhatsApp Click-to-Chat Link: https://wa.me/03158441955?text=Hi%20Smile%20and%20Skin%20Co.%20%7C%20Best%20Dental%20Clinic%20in%20G-8%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -357,13 +372,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #26: SMART DENTAL CARE AND IMPLANT CENTER
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0333 6000953
-City: Islamabad
+Contact Details (Phone): 0333 6000953
+WhatsApp Click-to-Chat Link: https://wa.me/03336000953?text=Hi%20SMART%20DENTAL%20CARE%20AND%20IMPLANT%20CENTER%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi SMART DENTAL CARE AND IMPLANT CENTER team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -371,13 +386,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #27: 91 Dental Solutions
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0333-0174007
-City: Islamabad
+Contact Details (Phone): 0333-0174007
+WhatsApp Click-to-Chat Link: https://wa.me/03330174007?text=Hi%2091%20Dental%20Solutions%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi 91 Dental Solutions team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -385,13 +400,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #28: Dr. Mamoon Pasha (dentist, uk specialist) (cosmetic dentist)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5123456
-City: Islamabad
+Contact Details (Phone): 0300-5123456
+WhatsApp Click-to-Chat Link: https://wa.me/03005123456?text=Hi%20Dr.%20Mamoon%20Pasha%20(dentist%2C%20uk%20specialist)%20(cosmetic%20dentist)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Mamoon Pasha (dentist, uk specialist) (cosmetic dentist) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -399,13 +414,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #29: Precision Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051-8151800
-City: Islamabad
+Contact Details (Phone): 051-8151800
+WhatsApp Click-to-Chat Link: https://wa.me/0518151800?text=Hi%20Precision%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Precision Dental Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -413,13 +428,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #30: SJ Dental & Skin Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0309-4477774
-City: Islamabad
+Contact Details (Phone): 0309-4477774
+WhatsApp Click-to-Chat Link: https://wa.me/03094477774?text=Hi%20SJ%20Dental%20%26%20Skin%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi SJ Dental & Skin Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -427,8 +442,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #31: True Dental Care Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5123456
+Contact Details (Phone): 0300-5123456
+WhatsApp Click-to-Chat Link: https://wa.me/03005123456?text=Hi%20True%20Dental%20Care%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -441,13 +456,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #32: LUMINO Dental & Aesthetics Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0334-5218215
-City: Islamabad
+Contact Details (Phone): 0334-5218215
+WhatsApp Click-to-Chat Link: https://wa.me/03345218215?text=Hi%20LUMINO%20Dental%20%26%20Aesthetics%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi LUMINO Dental & Aesthetics Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -455,8 +470,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #33: Glamorous Dental Clinic Islamabad - Dentist Islamabad, Teeth Whitening, Dental Implants, Root Canal (RCT)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0349 9111000
+Contact Details (Phone): 0349 9111000
+WhatsApp Click-to-Chat Link: https://wa.me/03499111000?text=Hi%20Glamorous%20Dental%20Clinic%20Islamabad%20-%20Dentist%20Islamabad%2C%20Teeth%20Whitening%2C%20Dental%20Implants%2C%20Root%20Canal%20(RCT)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -469,8 +484,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #34: Elite Dental & Aesthetic Centre
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 303 5080011
+Contact Details (Phone): +92 303 5080011
+WhatsApp Click-to-Chat Link: https://wa.me/923035080011?text=Hi%20Elite%20Dental%20%26%20Aesthetic%20Centre%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -483,8 +498,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #35: Crescent Dental & Implants Clinic Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0302-8639880
+Contact Details (Phone): 0302-8639880
+WhatsApp Click-to-Chat Link: https://wa.me/03028639880?text=Hi%20Crescent%20Dental%20%26%20Implants%20Clinic%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -497,13 +512,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #36: Dentistry and beyond 24/7
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0311-1222398
-City: Islamabad
+Contact Details (Phone): 0311-1222398
+WhatsApp Click-to-Chat Link: https://wa.me/03111222398?text=Hi%20Dentistry%20and%20beyond%2024%2F7%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dentistry and beyond 24/7 team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -511,8 +526,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #37: Dental Specialists of Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-3627778
+Contact Details (Phone): 0300-3627778
+WhatsApp Click-to-Chat Link: https://wa.me/03003627778?text=Hi%20Dental%20Specialists%20of%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -525,13 +540,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #38: Oromax Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0302-8639880
-City: Islamabad
+Contact Details (Phone): 0302-8639880
+WhatsApp Click-to-Chat Link: https://wa.me/03028639880?text=Hi%20Oromax%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Oromax Dental Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -539,8 +554,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #39: The Tooth Doctor | Dental Clinic in Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051-5780879
+Contact Details (Phone): 051-5780879
+WhatsApp Click-to-Chat Link: https://wa.me/0515780879?text=Hi%20The%20Tooth%20Doctor%20%7C%20Dental%20Clinic%20in%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -553,8 +568,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #40: Dental Clinic Islamabad - Dr Usama Hayat | Teeth Aligners | Veneers | Dental Implants | Jaw Surgery
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 332 5488777
+Contact Details (Phone): +92 332 5488777
+WhatsApp Click-to-Chat Link: https://wa.me/923325488777?text=Hi%20Dental%20Clinic%20Islamabad%20-%20Dr%20Usama%20Hayat%20%7C%20Teeth%20Aligners%20%7C%20Veneers%20%7C%20Dental%20Implants%20%7C%20Jaw%20Surgery%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -567,13 +582,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #41: Dr Umar Younas
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 021 371 32273
-City: Islamabad
+Contact Details (Phone): 021 371 32273
+WhatsApp Click-to-Chat Link: https://wa.me/02137132273?text=Hi%20Dr%20Umar%20Younas%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr Umar Younas team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -581,13 +596,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #42: Dr.Kiran Haseeb Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0333 0174007
-City: Islamabad
+Contact Details (Phone): 0333 0174007
+WhatsApp Click-to-Chat Link: https://wa.me/03330174007?text=Hi%20Dr.Kiran%20Haseeb%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr.Kiran Haseeb Dental Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -595,13 +610,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #43: Dr. Anum Fatima
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 042-34500888
-City: Islamabad
+Contact Details (Phone): 042-34500888
+WhatsApp Click-to-Chat Link: https://wa.me/04234500888?text=Hi%20Dr.%20Anum%20Fatima%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Anum Fatima team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -609,8 +624,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #44: Dental Specialists of Islamabad
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-3627778
+Contact Details (Phone): 0300-3627778
+WhatsApp Click-to-Chat Link: https://wa.me/03003627778?text=Hi%20Dental%20Specialists%20of%20Islamabad%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Islamabad.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Islamabad
 
 Outreach Message:
@@ -623,13 +638,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #45: Pearly Whites Dental Studio
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0336 0367789
-City: Islamabad
+Contact Details (Phone): 0336 0367789
+WhatsApp Click-to-Chat Link: https://wa.me/03360367789?text=Hi%20Pearly%20Whites%20Dental%20Studio%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Pearly Whites Dental Studio team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -637,13 +652,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #46: Dental Art & Science
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5123456
-City: Islamabad
+Contact Details (Phone): 0300-5123456
+WhatsApp Click-to-Chat Link: https://wa.me/03005123456?text=Hi%20Dental%20Art%20%26%20Science%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dental Art & Science team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -651,13 +666,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #47: Dentesthetics
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 042-34500888
-City: Islamabad
+Contact Details (Phone): 042-34500888
+WhatsApp Click-to-Chat Link: https://wa.me/04234500888?text=Hi%20Dentesthetics%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dentesthetics team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -665,13 +680,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #48: Dr. Faisal Zahoor (Dental Surgeon)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 042-34500888
-City: Islamabad
+Contact Details (Phone): 042-34500888
+WhatsApp Click-to-Chat Link: https://wa.me/04234500888?text=Hi%20Dr.%20Faisal%20Zahoor%20(Dental%20Surgeon)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dr. Faisal Zahoor (Dental Surgeon) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -679,13 +694,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #49: The Dental Care Clinic ( Dr.Shahnawaz Ahmed)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 334 9540490
-City: Islamabad
+Contact Details (Phone): +92 334 9540490
+WhatsApp Click-to-Chat Link: https://wa.me/923349540490?text=Hi%20The%20Dental%20Care%20Clinic%20(%20Dr.Shahnawaz%20Ahmed)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi The Dental Care Clinic ( Dr.Shahnawaz Ahmed) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -693,13 +708,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #50: Dental Wellness Clinic By Dr. Alina
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 336 6122452
-City: Islamabad
+Contact Details (Phone): +92 336 6122452
+WhatsApp Click-to-Chat Link: https://wa.me/923366122452?text=Hi%20Dental%20Wellness%20Clinic%20By%20Dr.%20Alina%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Dental Wellness Clinic By Dr. Alina team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -707,8 +722,8 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #51: Zain Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0300-5123456
+Contact Details (Phone): 0300-5123456
+WhatsApp Click-to-Chat Link: https://wa.me/03005123456?text=Hi%20Zain%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20Karachi.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
 City: Karachi
 
 Outreach Message:
@@ -721,13 +736,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #52: American Dental Clinic & Skin works
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 300 5119776
-City: Islamabad
+Contact Details (Phone): +92 300 5119776
+WhatsApp Click-to-Chat Link: https://wa.me/923005119776?text=Hi%20American%20Dental%20Clinic%20%26%20Skin%20works%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi American Dental Clinic & Skin works team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -735,8 +750,7 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #53: Dental Solutions
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: NOT PROVIDED
+Contact Details (Phone): NOT PROVIDED
 City: Islamabad
 
 Outreach Message:
@@ -749,13 +763,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #54: Rehman Medical & Dental Centre (RMDC)
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 333 9213293
-City: Islamabad
+Contact Details (Phone): +92 333 9213293
+WhatsApp Click-to-Chat Link: https://wa.me/923339213293?text=Hi%20Rehman%20Medical%20%26%20Dental%20Centre%20(RMDC)%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Rehman Medical & Dental Centre (RMDC) team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -763,13 +777,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #55: Ali Dental Surgery & Esthetics
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051 2873633
-City: Islamabad
+Contact Details (Phone): 051 2873633
+WhatsApp Click-to-Chat Link: https://wa.me/0512873633?text=Hi%20Ali%20Dental%20Surgery%20%26%20Esthetics%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Ali Dental Surgery & Esthetics team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -777,13 +791,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #56: FACE TEETH SMILE Dental and Aesthetics
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: +92 332 5488777
-City: Islamabad
+Contact Details (Phone): +92 332 5488777
+WhatsApp Click-to-Chat Link: https://wa.me/923325488777?text=Hi%20FACE%20TEETH%20SMILE%20Dental%20and%20Aesthetics%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi FACE TEETH SMILE Dental and Aesthetics team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -791,13 +805,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #57: Smile Center Dental Clinic
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 0349 9111000
-City: Islamabad
+Contact Details (Phone): 0349 9111000
+WhatsApp Click-to-Chat Link: https://wa.me/03499111000?text=Hi%20Smile%20Center%20Dental%20Clinic%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi Smile Center Dental Clinic team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?
@@ -805,13 +819,13 @@ Would you be open to taking a look at them?
 --------------------------------------------------------------------------------
 Lead #58: It's About TEETH
 --------------------------------------------------------------------------------
-Contact Method: WhatsApp/SMS
-Contact Details: 051 8898748
-City: Islamabad
+Contact Details (Phone): 051 8898748
+WhatsApp Click-to-Chat Link: https://wa.me/0518898748?text=Hi%20It's%20About%20TEETH%20team%2C%0AI%20came%20across%20your%20profile%20and%20noticed%20you%20are%20providing%20dental%20services%20in%20NOT%20PROVIDED.%0AHaving%20a%20consistent%20social%20media%20presence%20is%20key%20to%20attracting%20new%20patients%20in%20your%20area.%0AI%20created%20sample%20post%20ideas%20for%20your%20clinic%20to%20help%20showcase%20your%20treatments.%0AWould%20you%20be%20open%20to%20taking%20a%20look%20at%20them%3F
+City: NOT PROVIDED
 
 Outreach Message:
 Hi It's About TEETH team,
-I came across your profile and noticed you are providing dental services in Islamabad.
+I came across your profile and noticed you are providing dental services in NOT PROVIDED.
 Having a consistent social media presence is key to attracting new patients in your area.
 I created sample post ideas for your clinic to help showcase your treatments.
 Would you be open to taking a look at them?

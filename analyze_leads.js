@@ -123,6 +123,28 @@ const fileContent = fs.readFileSync('dental leads 1.csv', 'utf8');
 const rows = parseCSV(fileContent);
 
 let output = '';
+let copyPasteMd = `# Copy-Paste Outreach Messages List\n\nThis file contains all dental leads with their outreach messages wrapped in code blocks for easy one-click copying.\n\n---\n\n`;
+let copyPasteTxt = `================================================================================\nDENTAL LEADS OUTREACH COPY-PASTE LIST\n================================================================================\nTotal Leads: {{TOTAL_LEADS}}\nUse this file to easily copy contacts and outreach messages without any markdown formatting.\n\n`;
+
+function customURLEncode(str) {
+  return encodeURIComponent(str);
+}
+
+function getDigitsOnly(str) {
+  return str.replace(/\D/g, '');
+}
+
+function extractPhoneFromText(text) {
+  if (!text) return null;
+  const regex = /(\+92|0)[0-9\s-]{7,15}/g;
+  const matches = text.match(regex);
+  if (matches && matches.length > 0) {
+    return matches[0].trim();
+  }
+  return null;
+}
+
+let leadCounter = 0;
 
 // Skip header and empty rows
 for (let i = 1; i < rows.length; i++) {
@@ -132,6 +154,7 @@ for (let i = 1; i < rows.length; i++) {
   const clinic_name = row[1] ? row[1].trim() : '';
   if (!clinic_name || clinic_name === 'qBF1Pd') continue;
 
+  leadCounter++;
   const nameLower = clinic_name.toLowerCase();
 
   // Find Instagram
@@ -174,6 +197,32 @@ for (let i = 1; i < rows.length; i++) {
   if (reviewSnippet) notes += `Review snippet: ${reviewSnippet}`;
   notes = notes.trim() || 'NOT PROVIDED';
 
+  // If phone is not provided, look for one in the notes
+  if (phone === 'NOT PROVIDED') {
+    const extracted = extractPhoneFromText(notes);
+    if (extracted) {
+      phone = extracted;
+    }
+  }
+
+  // Generate outreach message (Pitch 1: Post Ideas)
+  const outreachMessage = `Hi ${clinic_name} team,\nI came across your profile and noticed you are providing dental services in ${city}.\nHaving a consistent social media presence is key to attracting new patients in your area.\nI created sample post ideas for your clinic to help showcase your treatments.\nWould you be open to taking a look at them?`;
+
+  // Generate WhatsApp and Instagram links
+  let whatsappLink = '';
+  if (phone !== 'NOT PROVIDED') {
+    const digits = getDigitsOnly(phone);
+    if (digits) {
+      whatsappLink = `https://wa.me/${digits}?text=${customURLEncode(outreachMessage)}`;
+    }
+  }
+
+  let instagramLink = '';
+  if (instagram !== 'NOT PROVIDED') {
+    const handleWithoutAt = instagram.startsWith('@') ? instagram.slice(1) : instagram;
+    instagramLink = `https://instagram.com/${handleWithoutAt}`;
+  }
+
   // Section 1 & 2
   output += `########################################\n`;
   output += `CLINIC: ${clinic_name}\n`;
@@ -181,7 +230,13 @@ for (let i = 1; i < rows.length; i++) {
   output += `1. BASIC DATA (VERBATIM EXTRACTION ONLY)\n`;
   output += `- Clinic Name: ${clinic_name}\n`;
   output += `- Instagram: ${instagram}\n`;
+  if (instagramLink) {
+    output += `- Instagram Link: ${instagramLink}\n`;
+  }
   output += `- Phone/WhatsApp: ${phone}\n`;
+  if (whatsappLink) {
+    output += `- WhatsApp Link: ${whatsappLink}\n`;
+  }
   output += `- City: ${city}\n`;
   output += `- Notes: ${notes}\n\n`;
   output += `----------------------------------------\n\n`;
@@ -225,24 +280,74 @@ for (let i = 1; i < rows.length; i++) {
   output += `Idea 3: A post listing 3 simple tips to prevent cavities at home for family patients.\n\n`;
   output += `----------------------------------------\n\n`;
   output += `5. PERSONALIZED OUTREACH MESSAGE (CRITICAL OUTPUT)\n`;
-  output += `Hi ${clinic_name} team,\n`;
-  output += `I came across your profile and noticed you are providing dental services in ${city}.\n`;
-  output += `Having a consistent social media presence is key to attracting new patients in your area.\n`;
-  output += `I created sample post ideas for your clinic to help showcase your treatments.\n`;
-  output += `Would you be open to taking a look at them?\n\n`;
+  output += `${outreachMessage}\n\n`;
+  if (instagramLink) {
+    output += `Instagram Profile Link:\n${instagramLink}\n\n`;
+  }
+  if (whatsappLink) {
+    output += `WhatsApp Click-to-Chat Link:\n${whatsappLink}\n\n`;
+  }
   output += `----------------------------------------\n\n`;
   output += `6. CONTACT METHOD RECOMMENDATION\n`;
   if (instagram !== 'NOT PROVIDED') {
-    output += `- Instagram DM\n\n`;
+    output += `- Instagram DM\n`;
+    if (instagramLink) {
+      output += `  - Profile Link: ${instagramLink}\n`;
+    }
+    output += `\n`;
   } else {
-    output += `- WhatsApp/SMS to ${phone}\n\n`;
+    output += `- WhatsApp/SMS to ${phone}\n`;
+    if (whatsappLink) {
+      output += `  - WhatsApp Link: ${whatsappLink}\n`;
+    }
+    output += `\n`;
   }
   output += `----------------------------------------\n\n`;
   output += `7. FINAL SAFETY CHECK (SELF-VALIDATION)\n`;
   output += `- Did I invent any data? → No\n`;
   output += `- Did I assume missing info? → No\n`;
   output += `- Is outreach message truthful? → Yes\n\n`;
+
+  // Build copy-paste markdown entries
+  copyPasteMd += `### ${leadCounter}. **${clinic_name} (Via ${instagram !== 'NOT PROVIDED' ? 'Instagram' : 'WhatsApp/SMS'})**\n`;
+  if (instagram !== 'NOT PROVIDED') {
+    copyPasteMd += `- **Instagram:** \`${instagram}\`\n`;
+    if (instagramLink) {
+      copyPasteMd += `- **Instagram Link:** ${instagramLink}\n`;
+    }
+  }
+  copyPasteMd += `- **Phone/WhatsApp:** \`${phone}\`\n`;
+  if (whatsappLink) {
+    copyPasteMd += `- **WhatsApp Link:** ${whatsappLink}\n`;
+  }
+  copyPasteMd += `- **City:** ${city}\n`;
+  copyPasteMd += `- **Outreach Message:**\n`;
+  copyPasteMd += `\`\`\`text\n${outreachMessage}\n\`\`\`\n`;
+  if (instagram !== 'NOT PROVIDED') {
+    copyPasteMd += `- **Contact Method Recommendation:** \`Instagram DM\`\n\n`;
+  } else {
+    copyPasteMd += `- **Contact Method Recommendation:** \`WhatsApp/SMS to ${phone}\`\n\n`;
+  }
+  copyPasteMd += `---\n\n`;
+
+  // Build copy-paste text entries
+  copyPasteTxt += `--------------------------------------------------------------------------------\nLead #${leadCounter}: ${clinic_name}\n--------------------------------------------------------------------------------\n`;
+  if (instagram !== 'NOT PROVIDED') {
+    copyPasteTxt += `Contact Method: Instagram DM\nContact Details: ${instagram}\n`;
+    if (instagramLink) {
+      copyPasteTxt += `Instagram Profile Link: ${instagramLink}\n`;
+    }
+  }
+  copyPasteTxt += `Contact Details (Phone): ${phone}\n`;
+  if (whatsappLink) {
+    copyPasteTxt += `WhatsApp Click-to-Chat Link: ${whatsappLink}\n`;
+  }
+  copyPasteTxt += `City: ${city}\n\nOutreach Message:\n${outreachMessage}\n\n`;
 }
 
+copyPasteTxt = copyPasteTxt.replace('{{TOTAL_LEADS}}', leadCounter);
+
 fs.writeFileSync('leads_analysis_output.txt', output);
-console.log('Successfully generated complete leads_analysis_output.txt');
+fs.writeFileSync('leads_outreach_copy_paste.md', copyPasteMd);
+fs.writeFileSync('leads_outreach_copy_paste.txt', copyPasteTxt);
+console.log('Successfully generated leads_analysis_output.txt, leads_outreach_copy_paste.md, and leads_outreach_copy_paste.txt');

@@ -7914,7 +7914,81 @@ Would you be interested?`
       updateDashboardStats();
       setInterval(checkTimers, 60000); // Check follow-up status every minute
       checkTimers();
+      insertDirectLinks(); // Inject direct outreach links dynamically
     });
+
+    function customURLEncode(str) {
+      return encodeURIComponent(str)
+        .replace(/%20/g, '%20')
+        .replace(/,/g, '%2C')
+        .replace(/\n/g, '%0A')
+        .replace(/\?/g, '%3F');
+    }
+
+    function updateDirectLinks(id) {
+      const card = document.getElementById(id);
+      if (!card) return;
+      
+      const type = card.getAttribute('data-type');
+      if (type === 'whatsapp') {
+        const phoneEl = card.querySelector('.details-box .detail-row:first-child .detail-val');
+        if (!phoneEl) return;
+        const phoneText = phoneEl.childNodes[0].textContent.trim();
+        const digits = phoneText.replace(/\D/g, '');
+        
+        // Find the currently selected pitch message
+        const select = document.getElementById('sel-' + id);
+        if (!select) return;
+        const val = select.value;
+        const message = templatesDB[id][val];
+        
+        const waLink = card.querySelector('.wa-link');
+        if (waLink && digits) {
+          waLink.href = `https://wa.me/${digits}?text=${customURLEncode(message)}`;
+        }
+      } else if (type === 'instagram') {
+        const instaEl = card.querySelector('.details-box .detail-row:first-child .detail-val');
+        if (!instaEl) return;
+        const handleText = instaEl.childNodes[0].textContent.trim();
+        const handleWithoutAt = handleText.startsWith('@') ? handleText.slice(1) : handleText;
+        
+        const igLink = card.querySelector('.ig-link');
+        if (igLink) {
+          igLink.href = `https://instagram.com/${handleWithoutAt}`;
+        }
+      }
+    }
+
+    function insertDirectLinks() {
+      const cards = document.querySelectorAll('.lead-card');
+      cards.forEach(card => {
+        const id = card.id;
+        const type = card.getAttribute('data-type');
+        const detailsBox = card.querySelector('.details-box');
+        if (!detailsBox) return;
+        
+        const newRow = document.createElement('div');
+        newRow.className = 'detail-row';
+        
+        if (type === 'whatsapp') {
+          newRow.innerHTML = `
+            <span class="detail-label">WhatsApp Link</span>
+            <span class="detail-val">
+              <a href="#" target="_blank" class="wa-link" style="color: #10b981; text-decoration: underline; font-weight: bold;">Click to Chat ↗</a>
+            </span>
+          `;
+        } else if (type === 'instagram') {
+          newRow.innerHTML = `
+            <span class="detail-label">Instagram Link</span>
+            <span class="detail-val">
+              <a href="#" target="_blank" class="ig-link" style="color: #a855f7; text-decoration: underline; font-weight: bold;">Open Profile ↗</a>
+            </span>
+          `;
+        }
+        detailsBox.appendChild(newRow);
+        updateDirectLinks(id);
+      });
+    }
 
     function loadCRMState() {
       const cards = document.querySelectorAll('.lead-card');
@@ -8053,6 +8127,7 @@ Would you be interested?`
       const val = select.value;
       const body = document.getElementById('msg-body-' + id);
       body.innerText = templatesDB[id][val];
+      updateDirectLinks(id);
     }
 
     // Copy selected message

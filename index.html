@@ -510,6 +510,21 @@
   <header>
     <h1>Dental Outreach CRM Engine</h1>
     <p class="subtitle">Select pitches, log messages, and track your follow-up pipeline. Persistent on reload.</p>
+    
+    <!-- State Backup and Restore controls -->
+    <div style="margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+      <button class="btn btn-purple" onclick="exportCRMStateData()" style="padding: 0.5rem 1rem; font-size: 0.82rem; border-radius: 8px;">
+        📥 Export Backup
+      </button>
+      <button class="btn btn-blue" onclick="importCRMStateData()" style="padding: 0.5rem 1rem; font-size: 0.82rem; border-radius: 8px;">
+        📤 Import Backup
+      </button>
+    </div>
+    
+    <!-- Mobile Persistence Note -->
+    <p style="font-size: 0.78rem; color: var(--text-sub); margin-top: 0.75rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+      Note for mobile users: Due to local device security policies, your CRM state may reset on reload if opened locally as a file. Access this engine via the secure HTTPS website URL to persist state automatically. You can also use the buttons above to backup and restore your state between devices.
+    </p>
   </header>
 
   <!-- Statistics Overview Dashboard -->
@@ -7934,7 +7949,12 @@ Would you be interested?`
         const phoneEl = card.querySelector('.details-box .detail-row:first-child .detail-val');
         if (!phoneEl) return;
         const phoneText = phoneEl.childNodes[0].textContent.trim();
-        const digits = phoneText.replace(/\D/g, '');
+        let digits = phoneText.replace(/\D/g, '');
+        if (digits.startsWith('0') && !digits.startsWith('92')) {
+          digits = '92' + digits.slice(1);
+        } else if (digits.length === 10 && digits.startsWith('3')) {
+          digits = '92' + digits;
+        }
         
         // Find the currently selected pitch message
         const select = document.getElementById('sel-' + id);
@@ -7957,6 +7977,61 @@ Would you be interested?`
           igLink.href = `https://instagram.com/${handleWithoutAt}`;
         }
       }
+    }
+
+    function exportCRMStateData() {
+      const state = {};
+      const cards = document.querySelectorAll('.lead-card');
+      cards.forEach(card => {
+        const id = card.id;
+        const saved = localStorage.getItem(id);
+        if (saved) {
+          try {
+            state[id] = JSON.parse(saved);
+          } catch(e) {
+            console.error(e);
+          }
+        }
+      });
+      
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(state, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", "dental_crm_backup.json");
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('Backup file downloaded successfully!');
+    }
+
+    function importCRMStateData() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+      input.onchange = e => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = readerEvent => {
+          try {
+            const parsed = JSON.parse(readerEvent.target.result);
+            Object.keys(parsed).forEach(id => {
+              const data = parsed[id];
+              localStorage.setItem(id, JSON.stringify(data));
+              // Update Card UI
+              updateCardUIState(id, data.status, data.contactedAt, data.followupAt);
+            });
+            checkTimers();
+            updateDashboardStats();
+            showToast('CRM state restored successfully! 🎉');
+          } catch (err) {
+            alert('Failed to parse backup file: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
     }
 
     function insertDirectLinks() {

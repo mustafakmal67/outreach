@@ -61,7 +61,7 @@ CLINIC: {clinic_name}
 - Instagram: {exact from CSV OR "NOT PROVIDED"}
 - Instagram Link: {https://instagram.com/{handle_without_@} if Instagram provided, else omit}
 - Phone/WhatsApp: {exact from CSV, or extracted from notes if present, else "NOT PROVIDED"}
-- WhatsApp Link: {https://wa.me/{digits_only}?text={url_encoded_outreach_message} if Phone/WhatsApp is provided, else omit. Replace spaces with %20, commas with %2C, newlines with %0A, and question marks with %3F in the text parameter}
+- WhatsApp Link: {https://wa.me/{digits_only}?text={url_encoded_outreach_message} if Phone/WhatsApp is provided, else omit. Replace spaces with %20, commas with %2C, newlines with %0A, and question marks with %3F in the text parameter. The {digits_only} must contain digits only, replacing any leading 0 with the country code 92 (e.g., 03005151556 becomes 923005151556, +92 334 9540490 becomes 923349540490)}
 - City: {exact from CSV OR "NOT PROVIDED"}
 - Notes: {exact from CSV OR "NOT PROVIDED"}
 

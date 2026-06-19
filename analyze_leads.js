@@ -130,8 +130,19 @@ function customURLEncode(str) {
   return encodeURIComponent(str);
 }
 
-function getDigitsOnly(str) {
-  return str.replace(/\D/g, '');
+function formatWhatsAppNumber(phone) {
+  if (!phone || phone === 'NOT PROVIDED') return '';
+  let digits = phone.replace(/\D/g, '');
+  if (digits.startsWith('92')) {
+    return digits;
+  }
+  if (digits.startsWith('0')) {
+    return '92' + digits.slice(1);
+  }
+  if (digits.length === 10 && digits.startsWith('3')) {
+    return '92' + digits;
+  }
+  return digits;
 }
 
 function extractPhoneFromText(text) {
@@ -143,6 +154,10 @@ function extractPhoneFromText(text) {
   }
   return null;
 }
+
+// Sort keys by character length descending to ensure the most specific names are matched first
+const sortedInstagramKeys = Object.keys(INSTAGRAM_MAP).sort((a, b) => b.length - a.length);
+const sortedPhoneKeys = Object.keys(PHONE_MAP).sort((a, b) => b.length - a.length);
 
 let leadCounter = 0;
 
@@ -159,27 +174,39 @@ for (let i = 1; i < rows.length; i++) {
 
   // Find Instagram
   let instagram = 'NOT PROVIDED';
-  for (const [key, value] of Object.entries(INSTAGRAM_MAP)) {
+  for (const key of sortedInstagramKeys) {
     if (nameLower.includes(key)) {
-      instagram = value;
+      instagram = INSTAGRAM_MAP[key];
       break;
     }
   }
 
   // Find Phone/WhatsApp
   let phone = 'NOT PROVIDED';
-  for (const [key, value] of Object.entries(PHONE_MAP)) {
+  for (const key of sortedPhoneKeys) {
     if (nameLower.includes(key)) {
-      phone = value;
+      phone = PHONE_MAP[key];
       break;
     }
   }
 
-  // Extract City
+  // Extract City (Check for Islamabad sectors/markaz for robustness)
   let city = 'NOT PROVIDED';
   const address = row[14] ? row[14].trim() : (row[6] ? row[6].trim() : '');
   const searchStr = (clinic_name + ' ' + address).toLowerCase();
-  if (searchStr.includes('islamabad')) {
+  if (searchStr.includes('islamabad') || 
+      searchStr.includes('g-13') || searchStr.includes('g 13') ||
+      searchStr.includes('i-8') || searchStr.includes('i 8') ||
+      searchStr.includes('f-8') || searchStr.includes('f 8') ||
+      searchStr.includes('f-7') || searchStr.includes('f 7') ||
+      searchStr.includes('g-8') || searchStr.includes('g 8') ||
+      searchStr.includes('g-9') || searchStr.includes('g 9') ||
+      searchStr.includes('g-15') || searchStr.includes('g 15') ||
+      searchStr.includes('e-11') || searchStr.includes('e 11') ||
+      searchStr.includes('f-10') || searchStr.includes('f 10') ||
+      searchStr.includes('bahria') || searchStr.includes('dha') ||
+      searchStr.includes('rawalpindi') ||
+      searchStr.includes('jinnah super') || searchStr.includes('super market')) {
     city = 'Islamabad';
   } else if (searchStr.includes('karachi')) {
     city = 'Karachi';
@@ -211,7 +238,7 @@ for (let i = 1; i < rows.length; i++) {
   // Generate WhatsApp and Instagram links
   let whatsappLink = '';
   if (phone !== 'NOT PROVIDED') {
-    const digits = getDigitsOnly(phone);
+    const digits = formatWhatsAppNumber(phone);
     if (digits) {
       whatsappLink = `https://wa.me/${digits}?text=${customURLEncode(outreachMessage)}`;
     }

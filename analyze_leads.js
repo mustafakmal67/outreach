@@ -119,6 +119,33 @@ const PHONE_MAP = {
   "it's about teeth": "051 8898748"
 };
 
+// Check if a lead has a website domain listed in the CSV
+function hasWebsite(row) {
+  for (let idx = 0; idx < row.length; idx++) {
+    // Skip known non-website fields (index 0 is Maps URL, 8 & 9 are images)
+    if (idx === 0 || idx === 8 || idx === 9) continue;
+    const val = row[idx] ? row[idx].trim().toLowerCase() : '';
+    if (!val) continue;
+
+    // Check if the cell looks like a website domain
+    if (val.includes('http://') || val.includes('https://') || val.includes('www.')) {
+      if (!val.includes('google.com') && !val.includes('googleusercontent.com') && !val.includes('gstatic.com')) {
+        return true;
+      }
+    }
+    if (val.match(/[a-zA-Z0-9-]+\.(com|pk|org|net|edu|gov|co|info|biz|site|online|tech|us|io)(\/|$)/)) {
+      if (!val.includes('google') && !val.includes('gstatic') && !val.includes('lh3') && !val.includes('user.png')) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function cleanId(str) {
+  return str.replace(/[^a-zA-Z0-9]/g, '_');
+}
+
 const fileContent = fs.readFileSync('dental leads 1.csv', 'utf8');
 const rows = parseCSV(fileContent);
 
@@ -127,7 +154,11 @@ let copyPasteMd = `# Copy-Paste Outreach Messages List\n\nThis file contains all
 let copyPasteTxt = `================================================================================\nDENTAL LEADS OUTREACH COPY-PASTE LIST\n================================================================================\nTotal Leads: {{TOTAL_LEADS}}\nUse this file to easily copy contacts and outreach messages without any markdown formatting.\n\n`;
 
 function customURLEncode(str) {
-  return encodeURIComponent(str);
+  return encodeURIComponent(str)
+    .replace(/%20/g, '%20')
+    .replace(/,/g, '%2C')
+    .replace(/\n/g, '%0A')
+    .replace(/\?/g, '%3F');
 }
 
 function formatWhatsAppNumber(phone) {
@@ -159,15 +190,23 @@ function extractPhoneFromText(text) {
 const sortedInstagramKeys = Object.keys(INSTAGRAM_MAP).sort((a, b) => b.length - a.length);
 const sortedPhoneKeys = Object.keys(PHONE_MAP).sort((a, b) => b.length - a.length);
 
+let leadsHtml = '';
+let dbEntries = [];
 let leadCounter = 0;
 
-// Skip header and empty rows
+// Filter and Process Rows
 for (let i = 1; i < rows.length; i++) {
   const row = rows[i];
   if (row.length < 2) continue;
   
   const clinic_name = row[1] ? row[1].trim() : '';
   if (!clinic_name || clinic_name === 'qBF1Pd') continue;
+
+  // Filter: Skip clinics that DO have a website
+  if (hasWebsite(row)) {
+    console.log(`Skipping ${clinic_name} (has website)`);
+    continue;
+  }
 
   leadCounter++;
   const nameLower = clinic_name.toLowerCase();
@@ -232,25 +271,30 @@ for (let i = 1; i < rows.length; i++) {
     }
   }
 
-  // Generate outreach message (Pitch 1: Post Ideas)
-  const outreachMessage = `Hi ${clinic_name} team,\nI came across your profile and noticed you are providing dental services in ${city}.\nHaving a consistent social media presence is key to attracting new patients in your area.\nI created sample post ideas for your clinic to help showcase your treatments.\nWould you be open to taking a look at them?`;
+  // Generate outreach messages (Web design strategy)
+  const ideasMsg = `Hi ${clinic_name} team,\nI noticed you are providing dental services in ${city}.\nI wanted to check out your website to book an appointment/see your treatments, but it looks like you don't have a website online yet.\nHaving a modern website is key to letting patients book online and finding you on Google.\nI actually designed a custom website concept for your clinic to show you how it could look.\nWould you be open to taking a look at it?`;
+  const auditMsg = `Hi ${clinic_name} team,\nI was looking at dental clinics in ${city} on Google Maps and noticed that without a website, your clinic might be missing out on up to 50% of local search inquiries because patients can't browse your treatments online.\nI created a quick 2-minute video showing how adding a simple, fast-loading booking page could double your patient inquiries from Google Maps.\nCan I send you the link over?`;
+  const growthMsg = `Hi ${clinic_name} team,\nWe help dental practices in ${city} set up automated online booking websites that consistently bring in 15+ new implant and cosmetic patients every month without running expensive ads.\nWe recently built a booking system for a dental clinic nearby.\nCan I send you a brief PDF showing exactly how the booking system works and how much it increased their revenue?`;
+  const friendlyMsg = `Hi ${clinic_name} team,\nJust following up on my previous message. I know you guys must be busy treating patients at the clinic!\nDid you get a chance to look at the custom website concept / booking video I shared?\nWould love to hear if this is something you'd be interested in exploring for your clinic.`;
+  const tipMsg = `Hi ${clinic_name} team,\nNo pressure on my last message, but wanted to share a quick tip: we've seen dental clinics in Pakistan increase their patient booking rate by 40% just by adding a direct 'Book Appointment' button that links to WhatsApp in their Google Maps profile.\nSince you don't have a website yet, you can link this directly to your WhatsApp to capture bookings immediately.\nIf you'd like, I can send you a quick guide on how to set this up. Would you like it?`;
+
+  const defaultOutreachMessage = ideasMsg; // Default Pitch 1
 
   // Generate WhatsApp and Instagram links
   let whatsappLink = '';
-  if (phone !== 'NOT PROVIDED') {
-    const digits = formatWhatsAppNumber(phone);
-    if (digits) {
-      whatsappLink = `https://wa.me/${digits}?text=${customURLEncode(outreachMessage)}`;
-    }
+  const digits = formatWhatsAppNumber(phone);
+  if (digits) {
+    whatsappLink = `https://wa.me/${digits}?text=${customURLEncode(defaultOutreachMessage)}`;
   }
 
   let instagramLink = '';
+  let instagramHandleClean = instagram;
   if (instagram !== 'NOT PROVIDED') {
-    const handleWithoutAt = instagram.startsWith('@') ? instagram.slice(1) : instagram;
-    instagramLink = `https://instagram.com/${handleWithoutAt}`;
+    instagramHandleClean = instagram.startsWith('@') ? instagram.slice(1) : instagram;
+    instagramLink = `https://instagram.com/${instagramHandleClean}`;
   }
 
-  // Section 1 & 2
+  // Build standard output
   output += `########################################\n`;
   output += `CLINIC: ${clinic_name}\n`;
   output += `########################################\n\n`;
@@ -269,9 +313,9 @@ for (let i = 1; i < rows.length; i++) {
   output += `----------------------------------------\n\n`;
   output += `2. DATA VALIDATION STATUS\n`;
   output += `- Instagram Present: ${instagram !== 'NOT PROVIDED' ? 'YES' : 'NO'}\n`;
+  output += `- Phone Present: ${phone !== 'NOT PROVIDED' ? 'YES' : 'NO'}\n`;
   output += `- Enough Data for Outreach: YES (via ${instagram !== 'NOT PROVIDED' ? 'Instagram' : 'WhatsApp/SMS'})\n\n`;
 
-  // Always generate analysis since we have at least one contact channel (Instagram or WhatsApp/Phone)
   output += `----------------------------------------\n\n`;
   output += `3. MARKETING AUDIT\n`;
   output += `- Content Quality Score (1–10): 5\n`;
@@ -284,30 +328,26 @@ for (let i = 1; i < rows.length; i++) {
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `- Weaknesses:\n`;
-  if (instagram === 'NOT PROVIDED') {
-    output += `  - Instagram handle not listed in input data\n`;
-  } else {
-    output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
-  }
-  output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
-  output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
+  output += `  - No business website found online in CSV data\n`;
+  output += `  - Missing out on automated patient bookings\n`;
+  output += `  - Missing local search visibility boost from Google Maps backlink\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `- Missing Content Types:\n`;
-  output += `  - Educational content: UNKNOWN\n`;
-  output += `  - Trust content: UNKNOWN\n`;
-  output += `  - Before/After content: UNKNOWN\n`;
-  output += `  - Clinic branding consistency: UNKNOWN\n`;
-  output += `  - Patient testimonials: UNKNOWN\n`;
-  output += `- Confidence Level of Audit: LOW\n\n`;
+  output += `  - Online booking form: MISSING\n`;
+  output += `  - Treatment price list: MISSING\n`;
+  output += `  - Dentist bio & credentials: MISSING\n`;
+  output += `  - Mobile responsiveness: MISSING\n`;
+  output += `  - Patient testimonials: MISSING\n`;
+  output += `- Confidence Level of Audit: HIGH (verified absence of website)\n\n`;
   output += `----------------------------------------\n\n`;
   output += `4. CONTENT IDEAS (STRICT LIMIT)\n`;
-  output += `Idea 1: Introduce the lead dentist and team in a short video to build patient trust in ${city}.\n`;
-  output += `Idea 2: A carousel post explaining the step-by-step process of a routine dental cleaning.\n`;
-  output += `Idea 3: A post listing 3 simple tips to prevent cavities at home for family patients.\n\n`;
+  output += `Idea 1: Launch a mobile-friendly website with a direct 'Book Appointment' button.\n`;
+  output += `Idea 2: Add a dedicated 'Treatments' page showing implants, aesthetics, and general dentistry.\n`;
+  output += `Idea 3: Embed patient reviews and before/after smile transformations to build credibility.\n\n`;
   output += `----------------------------------------\n\n`;
   output += `5. PERSONALIZED OUTREACH MESSAGE (CRITICAL OUTPUT)\n`;
-  output += `${outreachMessage}\n\n`;
+  output += `${defaultOutreachMessage}\n\n`;
   if (instagramLink) {
     output += `Instagram Profile Link:\n${instagramLink}\n\n`;
   }
@@ -349,7 +389,7 @@ for (let i = 1; i < rows.length; i++) {
   }
   copyPasteMd += `- **City:** ${city}\n`;
   copyPasteMd += `- **Outreach Message:**\n`;
-  copyPasteMd += `\`\`\`text\n${outreachMessage}\n\`\`\`\n`;
+  copyPasteMd += `\`\`\`text\n${defaultOutreachMessage}\n\`\`\`\n`;
   if (instagram !== 'NOT PROVIDED') {
     copyPasteMd += `- **Contact Method Recommendation:** \`Instagram DM\`\n\n`;
   } else {
@@ -369,7 +409,114 @@ for (let i = 1; i < rows.length; i++) {
   if (whatsappLink) {
     copyPasteTxt += `WhatsApp Click-to-Chat Link: ${whatsappLink}\n`;
   }
-  copyPasteTxt += `City: ${city}\n\nOutreach Message:\n${outreachMessage}\n\n`;
+  copyPasteTxt += `City: ${city}\n\nOutreach Message:\n${defaultOutreachMessage}\n\n`;
+
+  // Generate Card HTML for dashboard
+  const id = `lead-${cleanId('dental leads 1.csv')}-${cleanId(clinic_name)}`;
+  const badgeClass = instagram !== 'NOT PROVIDED' ? 'badge-ig' : 'badge-wa';
+  const badgeLabel = instagram !== 'NOT PROVIDED' ? 'Instagram' : 'WhatsApp';
+  const contactLabel = instagram !== 'NOT PROVIDED' ? 'Instagram Handle' : 'WhatsApp Number';
+  const contactVal = instagram !== 'NOT PROVIDED' ? instagram : phone;
+  const channelType = instagram !== 'NOT PROVIDED' ? 'instagram' : 'whatsapp';
+
+  leadsHtml += `    <div class="lead-card status-new" 
+         id="${id}" 
+         data-name="${clinic_name.replace(/"/g, '&quot;')}"
+         data-file="dental leads 1.csv"
+         data-type="${channelType}"
+         data-status="new"
+         data-contacted-at=""
+         data-followup-at="">
+         
+      <div>
+        <div class="card-header-row">
+          <div class="clinic-title">${leadCounter}. ${clinic_name}</div>
+          <div class="badge-wrap">
+            <span class="badge ${badgeClass}">${badgeLabel}</span>
+            <span class="badge badge-file">dental leads 1.csv</span>
+          </div>
+        </div>
+
+        <div class="pipeline-status">
+          <div class="pipeline-step">
+            <div class="pipeline-dot">1</div>
+            <div class="pipeline-label">New</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="pipeline-dot">2</div>
+            <div class="pipeline-label">Waiting</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="pipeline-dot">3</div>
+            <div class="pipeline-label">Follow-up</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="pipeline-dot">✓</div>
+            <div class="pipeline-label">Booked</div>
+          </div>
+        </div>
+
+        <div class="details-box">
+          <div class="detail-row">
+            <span class="detail-label">${contactLabel}</span>
+            <span class="detail-val">
+              ${contactVal}
+              <button class="copy-btn" onclick="copyText('${contactVal.replace(/'/g, "\\'")}', 'Contact detail')">Copy</button>
+            </span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">City Location</span>
+            <span class="detail-val">${city}</span>
+          </div>
+        </div>
+
+        <div class="time-warning" id="warning-${id}"></div>
+
+        <div class="message-section">
+          <select class="template-selector" id="sel-${id}" onchange="changeTemplate('${id}')">
+            <optgroup label="Initial Pitch Messages">
+              <option value="ideas" selected>Pitch 1: Web Design Concept (Value-First)</option>
+              <option value="audit">Pitch 2: SEO & Speed Audit (Authority)</option>
+              <option value="growth">Pitch 3: Direct Patient Booking (Direct)</option>
+            </optgroup>
+            <optgroup label="Follow-Up Messages">
+              <option value="friendly">Follow-up 1: Friendly Bump</option>
+              <option value="tip">Follow-up 2: SEO & Booking Tip</option>
+            </optgroup>
+          </select>
+          <div class="msg-body-box" id="msg-body-${id}">${defaultOutreachMessage.replace(/</g, '&let;').replace(/>/g, '&get;')}</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="button-group">
+          <button class="btn btn-blue" id="btn-copy-${id}" onclick="copyMessageText('${id}')">
+            Copy Message Text
+          </button>
+          
+          <button class="btn btn-cyan" id="btn-trigger-${id}" onclick="logMessageSent('${id}')">
+            Log Sent & Start Timer
+          </button>
+
+          <button class="btn btn-green btn-full" onclick="markClinicBooked('${id}')">
+            🎉 Mark Clinic as Booked
+          </button>
+
+          <button class="btn btn-rose btn-full" onclick="resetClinicState('${id}')">
+            Reset Status
+          </button>
+        </div>
+      </div>
+    </div>\n\n`;
+
+  // Build templatesDB JS object
+  dbEntries.push(`      "${id}": {
+        ideas: \`${ideasMsg.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`,
+        audit: \`${auditMsg.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`,
+        growth: \`${growthMsg.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`,
+        friendly: \`${friendlyMsg.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`,
+        tip: \`${tipMsg.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`
+      }`);
 }
 
 copyPasteTxt = copyPasteTxt.replace('{{TOTAL_LEADS}}', leadCounter);
@@ -378,3 +525,50 @@ fs.writeFileSync('leads_analysis_output.txt', output);
 fs.writeFileSync('leads_outreach_copy_paste.md', copyPasteMd);
 fs.writeFileSync('leads_outreach_copy_paste.txt', copyPasteTxt);
 console.log('Successfully generated leads_analysis_output.txt, leads_outreach_copy_paste.md, and leads_outreach_copy_paste.txt');
+
+// Helper to inject HTML grid and DB into dashboard files
+function updateDashboardHTML(filename, leadsHtml, dbString) {
+  if (!fs.existsSync(filename)) return;
+  
+  let html = fs.readFileSync(filename, 'utf8');
+
+  // Replace grid
+  const gridStartMarker = '<div class="leads-grid" id="leadsGrid">';
+  const gridEndMarker = '<div class="toast" id="toast">';
+  
+  const gridStartIdx = html.indexOf(gridStartMarker);
+  const gridEndIdx = html.indexOf(gridEndMarker);
+  
+  if (gridStartIdx !== -1 && gridEndIdx !== -1) {
+    const beforeGrid = html.substring(0, gridStartIdx + gridStartMarker.length);
+    const gridSegment = html.substring(gridStartIdx + gridStartMarker.length, gridEndIdx);
+    const lastCloseDivIdx = gridSegment.lastIndexOf('</div>');
+    
+    if (lastCloseDivIdx !== -1) {
+      const afterGrid = gridSegment.substring(lastCloseDivIdx);
+      const remainder = html.substring(gridEndIdx);
+      html = beforeGrid + '\n' + leadsHtml + '  ' + afterGrid + remainder;
+    }
+  }
+
+  // Replace templatesDB
+  const dbStartMarker = 'const templatesDB = {';
+  const dbEndMarker = '// Load persisted state on load';
+  
+  const dbStartIdx = html.indexOf(dbStartMarker);
+  const dbEndIdx = html.indexOf(dbEndMarker);
+  
+  if (dbStartIdx !== -1 && dbEndIdx !== -1) {
+    const beforeDb = html.substring(0, dbStartIdx);
+    const afterDb = html.substring(dbEndIdx);
+    html = beforeDb + dbString + '\n\n    ' + afterDb;
+  }
+
+  fs.writeFileSync(filename, html, 'utf8');
+  console.log(`Successfully updated ${filename}`);
+}
+
+const dbString = `const templatesDB = {\n${dbEntries.join(',\n')}\n    };`;
+
+updateDashboardHTML('leads_outreach_dashboard.html', leadsHtml, dbString);
+updateDashboardHTML('index.html', leadsHtml, dbString);

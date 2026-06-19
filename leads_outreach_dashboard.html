@@ -520,10 +520,22 @@
         📤 Import Backup
       </button>
     </div>
+
+    <!-- Real-time Cloud Sync controls -->
+    <div style="margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 0.5rem; flex-wrap: wrap; background: rgba(255,255,255,0.03); padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border-color); max-width: 650px; margin-left: auto; margin-right: auto;">
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-main);">🔄 Real-time Cloud Sync:</span>
+      <input type="text" id="syncKeyInput" placeholder="Sync Key" style="background: rgba(0,0,0,0.4); border: 1px solid var(--border-color); color: var(--text-main); padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.82rem; font-family: monospace; width: 120px;" onchange="updateSyncKey(this.value)">
+      <button class="btn btn-green" onclick="generateNewSyncKey()" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: 6px; font-weight: bold; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3);">
+        Generate New Key
+      </button>
+      <button class="btn btn-cyan" onclick="copyShareLink()" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; border-radius: 6px; font-weight: bold; background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3);">
+        Copy Share Link 🔗
+      </button>
+    </div>
     
     <!-- Mobile Persistence Note -->
     <p style="font-size: 0.78rem; color: var(--text-sub); margin-top: 0.75rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
-      Note for mobile users: Due to local device security policies, your CRM state may reset on reload if opened locally as a file. Access this engine via the secure HTTPS website URL to persist state automatically. You can also use the buttons above to backup and restore your state between devices.
+      Note for mobile users: Due to local device security policies, your CRM state may reset on reload if opened locally as a file. Access this engine via the secure HTTPS website URL to persist state automatically. You can also use the real-time cloud sync above to keep PC and mobile in sync.
     </p>
   </header>
 
@@ -8066,6 +8078,7 @@ Would you be interested?`
     }
 
     function loadCRMState() {
+      // 1. Load local cache first
       const cards = document.querySelectorAll('.lead-card');
       cards.forEach(card => {
         const id = card.id;
@@ -8079,13 +8092,131 @@ Would you be interested?`
           }
         }
       });
+      
+      // 2. Determine sync key
+      const urlParams = new URLSearchParams(window.location.search);
+      let syncKey = urlParams.get('key') || localStorage.getItem('crm_sync_key') || 'yo2hknzp';
+      localStorage.setItem('crm_sync_key', syncKey);
+      
+      // Update UI element showing key
+      const syncKeyInput = document.getElementById('syncKeyInput');
+      if (syncKeyInput) {
+        syncKeyInput.value = syncKey;
+      }
+      
+      // 3. Load cloud data and overwrite local cache
+      loadCloudCRMState(syncKey);
+      
+      // 4. Start periodic background sync (every 10 seconds)
+      setInterval(() => {
+        const currentKey = localStorage.getItem('crm_sync_key') || 'yo2hknzp';
+        loadCloudCRMState(currentKey, true); // silent = true
+      }, 10000);
+    }
+
+    function loadCloudCRMState(appKey, silent) {
+      if (!silent) {
+        showToast('Syncing with cloud... ⏳');
+      }
+      const cards = document.querySelectorAll('.lead-card');
+      let loadedCount = 0;
+      cards.forEach(card => {
+        const id = card.id;
+        fetch(`https://keyvalue.immanuel.co/api/KeyVal/GetValue/${appKey}/${id}`)
+          .then(r => r.text())
+          .then(text => {
+            let val = text ? text.trim() : "";
+            // Remove double quotes returned by API string wrapping
+            if (val.startsWith('"') && val.endsWith('"')) {
+              val = val.slice(1, -1);
+            }
+            if (val && val !== 'null' && val !== 'Value not found' && val !== '') {
+              let parsedData = null;
+              if (val.includes('_')) {
+                const parts = val.split('_');
+                parsedData = {
+                  status: parts[0],
+                  contactedAt: parts[1] === '0' || parts[1] === '' ? '' : parseInt(parts[1]),
+                  followupAt: parts[2] === '0' || parts[2] === '' ? '' : parseInt(parts[2])
+                };
+              } else {
+                try {
+                  parsedData = JSON.parse(val);
+                } catch(e) {}
+              }
+
+              if (parsedData && parsedData.status) {
+                const localJSON = JSON.stringify(parsedData);
+                const currentLocal = localStorage.getItem(id);
+                if (currentLocal !== localJSON) {
+                  localStorage.setItem(id, localJSON);
+                  updateCardUIState(id, parsedData.status, parsedData.contactedAt, parsedData.followupAt);
+                }
+              }
+            }
+            loadedCount++;
+            if (loadedCount === cards.length) {
+              updateDashboardStats();
+              if (!silent) {
+                showToast('CRM state fully synced! 🟢');
+              }
+            }
+          })
+          .catch(e => {
+            loadedCount++;
+            if (loadedCount === cards.length) {
+              updateDashboardStats();
+            }
+          });
+      });
     }
 
     function saveCRMState(id, status, contactedAt, followupAt) {
       const data = { status, contactedAt, followupAt };
-      localStorage.setItem(id, JSON.stringify(data));
+      const valString = JSON.stringify(data);
+      localStorage.setItem(id, valString);
       updateCardUIState(id, status, contactedAt, followupAt);
       updateDashboardStats();
+      
+      // Push to cloud storage using colon-free status_contactedAt_followupAt format
+      const appKey = localStorage.getItem('crm_sync_key') || 'yo2hknzp';
+      const safeString = `${status}_${contactedAt || 0}_${followupAt || 0}`;
+      fetch(`https://keyvalue.immanuel.co/api/KeyVal/UpdateValue/${appKey}/${id}/${encodeURIComponent(safeString)}`, {
+        method: 'POST'
+      }).then(() => {
+        // Successfully pushed
+      }).catch(e => console.error("Cloud save failed", e));
+    }
+
+    function updateSyncKey(val) {
+      const cleanKey = val.trim().replace(/[^a-zA-Z0-9]/g, '');
+      if (!cleanKey) return;
+      localStorage.setItem('crm_sync_key', cleanKey);
+      showToast('Sync key updated! Fetching cloud state...');
+      loadCloudCRMState(cleanKey);
+    }
+
+    function generateNewSyncKey() {
+      if (confirm('Generating a new key will start a fresh sync bucket. If you have existing progress, write down your old key first. Proceed?')) {
+        fetch('https://keyvalue.immanuel.co/api/KeyVal/GetAppKey')
+          .then(r => r.text())
+          .then(key => {
+            const cleanKey = key.trim().replace(/"/g, '');
+            if (cleanKey) {
+              const input = document.getElementById('syncKeyInput');
+              if (input) input.value = cleanKey;
+              updateSyncKey(cleanKey);
+            }
+          });
+      }
+    }
+
+    function copyShareLink() {
+      const currentKey = localStorage.getItem('crm_sync_key') || 'yo2hknzp';
+      const shareUrl = `${window.location.origin}${window.location.pathname}?key=${currentKey}`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        showToast('Shareable sync link copied! Send it to your phone.');
+      });
     }
 
     function updateCardUIState(id, status, contactedAt, followupAt) {
@@ -8257,7 +8388,15 @@ Would you be interested?`
         localStorage.removeItem(id);
         updateCardUIState(id, 'new', '', '');
         checkTimers();
-        showToast('Status reset to New.');
+        
+        // Reset cloud state to new_0_0
+        const appKey = localStorage.getItem('crm_sync_key') || 'yo2hknzp';
+        const safeString = "new_0_0";
+        fetch(`https://keyvalue.immanuel.co/api/KeyVal/UpdateValue/${appKey}/${id}/${encodeURIComponent(safeString)}`, {
+          method: 'POST'
+        }).then(() => {
+          showToast('Status reset to New locally and on cloud.');
+        }).catch(e => console.error("Cloud reset failed", e));
       }
     }
 

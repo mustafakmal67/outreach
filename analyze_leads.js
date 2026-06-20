@@ -57,7 +57,10 @@ const INSTAGRAM_MAP = {
   "tooth crew clinic": "@toothcrewclinic",
   "smile square dental & aesthetic clinic": "@smilesquareIslamabad",
   "oradent dental clinic": "@oradent_clinic",
-  "smile square dental": "@smilesquareIslamabad"
+  "smile square dental": "@smilesquareIslamabad",
+  "dental specialists of islamabad": "@dentalspecialistsislamabad",
+  "dr. ammar & associates | dental practice": "@drammardental",
+  "shoaib dental clinic in pwd": "@shoaibdental"
 };
 
 // Maps clinic/business names to Phone/WhatsApp numbers discovered from web/Google Maps
@@ -119,49 +122,16 @@ const PHONE_MAP = {
   "it's about teeth": "051 8898748"
 };
 
-// Check if a lead has a website domain listed in the CSV
-function hasWebsite(row) {
-  const val = row[11] ? row[11].trim().toLowerCase() : '';
-  if (!val) return false;
-
-  // If it's a Google Ads click/redirect link, it means they DO have a website!
-  if (val.includes('google.com/aclk') || val.includes('google.com/url') || val.includes('googleadservices.com')) {
-    return true;
-  }
-
-  // If it's a normal Google domain/Maps/etc. link, it's NOT a website
-  if (val.includes('google.com') || val.includes('googleusercontent.com') || val.includes('gstatic.com')) {
-    return false;
-  }
-
-  // If it's a social link (Facebook, YouTube, Instagram), they don't have their own website
-  if (val.includes('facebook.com') || val.includes('youtube.com') || val.includes('instagram.com') || val.includes('twitter.com') || val.includes('linkedin.com')) {
-    return false;
-  }
-
-  // If it is a normal URL, they have a website
-  if (val.includes('http://') || val.includes('https://') || val.includes('www.')) {
-    return true;
-  }
-  if (val.match(/[a-zA-Z0-9-]+\.(com|pk|org|net|edu|gov|co|info|biz|site|online|tech|us|io)(\/|$)/)) {
-    if (!val.includes('lh3') && !val.includes('user.png')) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
 function cleanId(str) {
   return str.replace(/[^a-zA-Z0-9]/g, '_');
 }
 
-const fileContent = fs.readFileSync('google.csv', 'utf8');
+const fileContent = fs.readFileSync('dentist pwd smma.csv', 'utf8');
 const rows = parseCSV(fileContent);
 
 let output = '';
-let copyPasteMd = `# Copy-Paste Outreach Messages List\n\nThis file contains all real estate leads with their outreach messages wrapped in code blocks for easy one-click copying.\n\n---\n\n`;
-let copyPasteTxt = `================================================================================\nREAL ESTATE LEADS OUTREACH COPY-PASTE LIST\n================================================================================\nTotal Leads: {{TOTAL_LEADS}}\nUse this file to easily copy contacts and outreach messages without any markdown formatting.\n\n`;
+let copyPasteMd = `# Copy-Paste Outreach Messages List\n\nThis file contains all dental leads with their outreach messages wrapped in code blocks for easy one-click copying.\n\n---\n\n`;
+let copyPasteTxt = `================================================================================\nDENTAL SMMA LEADS OUTREACH COPY-PASTE LIST\n================================================================================\nTotal Leads: {{TOTAL_LEADS}}\nUse this file to easily copy contacts and outreach messages without any markdown formatting.\n\n`;
 
 function customURLEncode(str) {
   return encodeURIComponent(str)
@@ -203,19 +173,13 @@ let leadsHtml = '';
 let dbEntries = [];
 let leadCounter = 0;
 
-// Filter and Process Rows
+// Filter and Process Rows (No website filtering)
 for (let i = 1; i < rows.length; i++) {
   const row = rows[i];
   if (row.length < 2) continue;
   
   const clinic_name = row[1] ? row[1].trim() : '';
   if (!clinic_name || clinic_name === 'qBF1Pd') continue;
-
-  // Filter: Skip clinics that DO have a website
-  if (hasWebsite(row)) {
-    console.log(`Skipping ${clinic_name} (has website)`);
-    continue;
-  }
 
   // Find Phone/WhatsApp from CSV column 10 directly
   let phone = row[10] ? row[10].trim() : 'NOT PROVIDED';
@@ -254,20 +218,20 @@ for (let i = 1; i < rows.length; i++) {
   // Extract City Location by scanning the entire row text
   let city = 'NOT PROVIDED';
   const rowText = row.join(' ').toLowerCase();
-  if (rowText.includes('islamabad') || rowText.includes('g-11') || rowText.includes('g-13') || rowText.includes('f-10') || rowText.includes('f-7') || rowText.includes('f-8') || rowText.includes('i-8')) {
+  if (rowText.includes('islamabad') || rowText.includes('pwd') || rowText.includes('g-11') || rowText.includes('g-13') || rowText.includes('f-10') || rowText.includes('f-7') || rowText.includes('f-8') || rowText.includes('i-8')) {
     city = 'Islamabad';
   } else if (rowText.includes('karachi')) {
     city = 'Karachi';
   } else if (rowText.includes('lahore')) {
     city = 'Lahore';
-  } else if (rowText.includes('rawalpindi') || rowText.includes('pwd')) {
+  } else if (rowText.includes('rawalpindi') || rowText.includes('soan')) {
     city = 'Rawalpindi';
   }
 
   // Format Notes
   const rating = row[2] ? row[2].trim() : '';
   const reviews = row[3] ? row[3].trim() : '';
-  const reviewSnippet = row[17] ? row[17].trim() : '';
+  const reviewSnippet = row[19] ? row[19].trim() : '';
   let notes = '';
   if (rating) notes += `Rating: ${rating} `;
   if (reviews) notes += `${reviews} `;
@@ -282,12 +246,12 @@ for (let i = 1; i < rows.length; i++) {
     }
   }
 
-  // Short, conversational, human-like outreach messages (Real estate landing page pivot with free demo offer)
-  const ideasMsg = `Hi ${clinic_name} team, noticed you're doing property deals ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'} but couldn't find a website for your agency. I went ahead and made a free demo website concept showing how you can present your agency's services and get clients to WhatsApp you directly. Would it be alright if I sent the link over?`;
-  const auditMsg = `Hi ${clinic_name} team, I noticed your property agency listing on Google Maps doesn't link to a website. I actually built a free demo landing page modeled for your agency to show how you can present your services and get more client inquiries. Can I send the link over to take a quick look?`;
-  const growthMsg = `Hi ${clinic_name} team, we build high-converting professional websites for real estate agencies ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'} to help them get direct client inquiries and build trust online. I created a free demo landing page modeled for your business to show you how it works. Can I share it with you?`;
-  const friendlyMsg = `Hey, just checking in. I know you guys are busy closing deals! Did you get a chance to see my message about the free demo agency website I set up for you? Let me know if you want to take a quick look.`;
-  const tipMsg = `Quick tip: having a clean profile page that embeds client reviews and links directly to your WhatsApp is the fastest way to build trust with buyers. The free demo website I created for you has this fully set up. Let me know if I should send the link over to show you.`;
+  // Short, conversational, high-converting outreach messages (Dental SMMA & Page Growth pivot)
+  const ideasMsg = `Hi ${clinic_name} team, I was looking at your Instagram page and noticed a few quick tweaks you could make to get more patient inquiries ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'}. I went ahead and designed 3 custom post concepts for your clinic to show you what I mean. Would it be alright if I sent them over?`;
+  const auditMsg = `Hi ${clinic_name} team, I noticed you guys aren't posting regularly on social media to get patients ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'}. I recorded a quick 60-second video showing 3 simple content changes that could double your monthly page growth. Can I send the link over?`;
+  const growthMsg = `Hi ${clinic_name} team, we manage and grow social media pages for dental clinics, helping them book 10+ new patients every month from Instagram. I put together a quick 3-day content plan specifically for your clinic to show you our strategy. Can I share it?`;
+  const friendlyMsg = `Hey, just checking in. I know running a busy clinic takes a lot of time! Did you get a chance to see the custom post designs I created for you? Let me know if I should send them over.`;
+  const tipMsg = `Quick tip: posting patient video reviews on Reels is the fastest way to get local patients from Instagram ${city !== 'NOT PROVIDED' ? 'in ' + city : 'in the area'}. I actually drafted a simple video template you can use with your patients. Let me know if you want it?`;
 
   const defaultOutreachMessage = ideasMsg; // Default Pitch 1
 
@@ -331,31 +295,31 @@ for (let i = 1; i < rows.length; i++) {
   output += `3. MARKETING AUDIT\n`;
   output += `- Content Quality Score (1–10): 5\n`;
   output += `- Strengths:\n`;
-  if (phone !== 'NOT PROVIDED') {
-    output += `  - Has a verified phone/WhatsApp number available\n`;
-  } else {
+  if (instagram !== 'NOT PROVIDED') {
     output += `  - Has an active Instagram handle listed\n`;
+  } else {
+    output += `  - Has a verified phone/WhatsApp number available\n`;
   }
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `- Weaknesses:\n`;
-  output += `  - No business website found online in CSV data\n`;
-  output += `  - Missing out on automated property/listing inquiries\n`;
-  output += `  - Missing local search visibility boost from Google Maps backlink\n`;
+  output += `  - Inconsistent posting schedule on social media\n`;
+  output += `  - Low patient engagement on Instagram/Facebook\n`;
+  output += `  - Missing educational patient acquisition videos (Reels)\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `  - UNKNOWN (NOT IN INPUT DATA)\n`;
   output += `- Missing Content Types:\n`;
-  output += `  - Listing catalog / inquiry form: MISSING\n`;
-  output += `  - Property photo catalogs: MISSING\n`;
-  output += `  - Agent bios & trust credentials: MISSING\n`;
-  output += `  - Mobile-responsive contact portal: MISSING\n`;
-  output += `  - Client reviews & testimonials: MISSING\n`;
-  output += `- Confidence Level of Audit: HIGH (verified absence of website)\n\n`;
+  output += `  - Before/After transformations: MISSING\n`;
+  output += `  - Dentist profile introduction Reels: MISSING\n`;
+  output += `  - Educational treatment walk-throughs: MISSING\n`;
+  output += `  - Interactive patient Q&A stories: MISSING\n`;
+  output += `  - Client review snippets/testimonials: MISSING\n`;
+  output += `- Confidence Level of Audit: LOW\n\n`;
   output += `----------------------------------------\n\n`;
   output += `4. CONTENT IDEAS (STRICT LIMIT)\n`;
-  output += `Idea 1: Launch a mobile-friendly listing site with direct WhatsApp links for each property.\n`;
-  output += `Idea 2: Create a dedicated 'Current Listings' catalog page categorized by budget & area.\n`;
-  output += `Idea 3: Embed local area reviews and past client success testimonials to build buyer trust.\n\n`;
+  output += `Idea 1: Record a short Q&A video with the lead dentist explaining root canal pain relief.\n`;
+  output += `Idea 2: Create a high-contrast carousel showcasing a patient's smile transformation.\n`;
+  output += `Idea 3: Share 3 quick hygiene tips for kids to attract family patient bookings.\n\n`;
   output += `----------------------------------------\n\n`;
   output += `5. PERSONALIZED OUTREACH MESSAGE (CRITICAL OUTPUT)\n`;
   output += `${defaultOutreachMessage}\n\n`;
@@ -367,16 +331,16 @@ for (let i = 1; i < rows.length; i++) {
   }
   output += `----------------------------------------\n\n`;
   output += `6. CONTACT METHOD RECOMMENDATION\n`;
-  if (phone !== 'NOT PROVIDED') {
-    output += `- WhatsApp/SMS to ${phone}\n`;
-    if (whatsappLink) {
-      output += `  - WhatsApp Link: ${whatsappLink}\n`;
-    }
-    output += `\n`;
-  } else {
+  if (instagram !== 'NOT PROVIDED') {
     output += `- Instagram DM\n`;
     if (instagramLink) {
       output += `  - Profile Link: ${instagramLink}\n`;
+    }
+    output += `\n`;
+  } else {
+    output += `- WhatsApp/SMS to ${phone}\n`;
+    if (whatsappLink) {
+      output += `  - WhatsApp Link: ${whatsappLink}\n`;
     }
     output += `\n`;
   }
@@ -387,55 +351,53 @@ for (let i = 1; i < rows.length; i++) {
   output += `- Is outreach message truthful? → Yes\n\n`;
 
   // Build copy-paste markdown entries
-  copyPasteMd += `### ${leadCounter}. **${clinic_name} (Via ${phone !== 'NOT PROVIDED' ? 'WhatsApp/SMS' : 'Instagram'})**\n`;
-  if (phone !== 'NOT PROVIDED') {
-    copyPasteMd += `- **Phone/WhatsApp:** \`${phone}\`\n`;
-    if (whatsappLink) {
-      copyPasteMd += `- **WhatsApp Link:** ${whatsappLink}\n`;
-    }
-  } else {
+  copyPasteMd += `### ${leadCounter}. **${clinic_name} (Via ${instagram !== 'NOT PROVIDED' ? 'Instagram' : 'WhatsApp/SMS'})**\n`;
+  if (instagram !== 'NOT PROVIDED') {
     copyPasteMd += `- **Instagram:** \`${instagram}\`\n`;
     if (instagramLink) {
       copyPasteMd += `- **Instagram Link:** ${instagramLink}\n`;
     }
   }
+  copyPasteMd += `- **Phone/WhatsApp:** \`${phone}\`\n`;
+  if (whatsappLink) {
+    copyPasteMd += `- **WhatsApp Link:** ${whatsappLink}\n`;
+  }
   copyPasteMd += `- **City:** ${city}\n`;
   copyPasteMd += `- **Outreach Message:**\n`;
   copyPasteMd += `\`\`\`text\n${defaultOutreachMessage}\n\`\`\`\n`;
-  if (phone !== 'NOT PROVIDED') {
-    copyPasteMd += `- **Contact Method Recommendation:** \`WhatsApp/SMS to ${phone}\`\n\n`;
-  } else {
+  if (instagram !== 'NOT PROVIDED') {
     copyPasteMd += `- **Contact Method Recommendation:** \`Instagram DM\`\n\n`;
+  } else {
+    copyPasteMd += `- **Contact Method Recommendation:** \`WhatsApp/SMS to ${phone}\`\n\n`;
   }
   copyPasteMd += `---\n\n`;
 
   // Build copy-paste text entries
   copyPasteTxt += `--------------------------------------------------------------------------------\nLead #${leadCounter}: ${clinic_name}\n--------------------------------------------------------------------------------\n`;
-  if (phone !== 'NOT PROVIDED') {
-    copyPasteTxt += `Contact Method: WhatsApp/SMS\nContact Details: ${phone}\n`;
-    if (whatsappLink) {
-      copyPasteTxt += `WhatsApp Click-to-Chat Link: ${whatsappLink}\n`;
-    }
-  } else {
+  if (instagram !== 'NOT PROVIDED') {
     copyPasteTxt += `Contact Method: Instagram DM\nContact Details: ${instagram}\n`;
     if (instagramLink) {
       copyPasteTxt += `Instagram Profile Link: ${instagramLink}\n`;
     }
   }
+  copyPasteTxt += `Contact Details (Phone): ${phone}\n`;
+  if (whatsappLink) {
+    copyPasteTxt += `WhatsApp Click-to-Chat Link: ${whatsappLink}\n`;
+  }
   copyPasteTxt += `City: ${city}\n\nOutreach Message:\n${defaultOutreachMessage}\n\n`;
 
   // Generate Card HTML for dashboard
-  const id = `lead-${cleanId('google.csv')}-${cleanId(clinic_name)}`;
-  const badgeClass = phone !== 'NOT PROVIDED' ? 'badge-wa' : 'badge-ig';
-  const badgeLabel = phone !== 'NOT PROVIDED' ? 'WhatsApp' : 'Instagram';
-  const contactLabel = phone !== 'NOT PROVIDED' ? 'WhatsApp Number' : 'Instagram Handle';
-  const contactVal = phone !== 'NOT PROVIDED' ? phone : instagram;
-  const channelType = phone !== 'NOT PROVIDED' ? 'whatsapp' : 'instagram';
+  const id = `lead-${cleanId('dentist pwd smma.csv')}-${cleanId(clinic_name)}`;
+  const badgeClass = instagram !== 'NOT PROVIDED' ? 'badge-ig' : 'badge-wa';
+  const badgeLabel = instagram !== 'NOT PROVIDED' ? 'Instagram' : 'WhatsApp';
+  const contactLabel = instagram !== 'NOT PROVIDED' ? 'Instagram Handle' : 'WhatsApp Number';
+  const contactVal = instagram !== 'NOT PROVIDED' ? instagram : phone;
+  const channelType = instagram !== 'NOT PROVIDED' ? 'instagram' : 'whatsapp';
 
   leadsHtml += `    <div class="lead-card status-new" 
          id="${id}" 
          data-name="${clinic_name.replace(/"/g, '&quot;')}"
-         data-file="google.csv"
+         data-file="dentist pwd smma.csv"
          data-type="${channelType}"
          data-status="new"
          data-contacted-at=""
@@ -446,7 +408,7 @@ for (let i = 1; i < rows.length; i++) {
           <div class="clinic-title">${leadCounter}. ${clinic_name}</div>
           <div class="badge-wrap">
             <span class="badge ${badgeClass}">${badgeLabel}</span>
-            <span class="badge badge-file">google.csv</span>
+            <span class="badge badge-file">dentist pwd smma.csv</span>
           </div>
         </div>
 
@@ -488,13 +450,13 @@ for (let i = 1; i < rows.length; i++) {
         <div class="message-section">
           <select class="template-selector" id="sel-${id}" onchange="changeTemplate('${id}')">
             <optgroup label="Initial Pitch Messages">
-              <option value="ideas" selected>Pitch 1: Web Design Concept (Value-First)</option>
-              <option value="audit">Pitch 2: SEO & Speed Audit (Authority)</option>
-              <option value="growth">Pitch 3: Direct Buyer Inquiries (Direct)</option>
+              <option value="ideas" selected>Pitch 1: Custom Designs (Value-First)</option>
+              <option value="audit">Pitch 2: 60s Content Audit (Authority)</option>
+              <option value="growth">Pitch 3: 3-Day Content Plan (Direct)</option>
             </optgroup>
             <optgroup label="Follow-Up Messages">
               <option value="friendly">Follow-up 1: Friendly Bump</option>
-              <option value="tip">Follow-up 2: WhatsApp Booking Tip</option>
+              <option value="tip">Follow-up 2: Video Reels Tip</option>
             </optgroup>
           </select>
           <div class="msg-body-box" id="msg-body-${id}">${defaultOutreachMessage.replace(/</g, '&let;').replace(/>/g, '&get;')}</div>
